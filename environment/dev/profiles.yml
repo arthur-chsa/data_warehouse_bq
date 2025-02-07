@@ -1,0 +1,13 @@
+data_warehouse_bq:
+  outputs:
+    dev:
+      dataset: staging
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: EU
+      method: oauth
+      priority: interactive
+      project: data-warehouse-dev-450118
+      threads: 8
+      type: bigquery
+  target: dev

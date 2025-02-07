@@ -1,0 +1,24 @@
+name: 'data_warehouse_bq'
+version: '1.0.0'
+config-version: 2
+
+profile: 'data_warehouse_bq'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+  
+models:
+  data_warehouse_bq:
+    +target_schema: staging
+
+snapshots:
+  data_warehouse_bq:
+    +target_schema: snapshot

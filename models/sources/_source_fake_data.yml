@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+- name: google_drive_marketing
+  schema: fake_data
+  database: data-warehouse-source-dev
+  tables:
+  - name: users_exclusion_list
